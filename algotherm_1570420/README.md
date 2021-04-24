@@ -8,6 +8,6 @@ gcc 1-1.c -o 1-1
 # execute
 ./1-1.c
 
-# buik
+# bulk
 gcc 1-1.c -o 1-1 && ./1-1
 ```
