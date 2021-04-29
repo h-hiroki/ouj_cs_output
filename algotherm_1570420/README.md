@@ -9,5 +9,5 @@ gcc 1-1.c -o 1-1
 ./1-1.c
 
 # bulk
-gcc 1-1.c -o 1-1 && ./1-1
+file=1-1 && gcc $file.c -o $file && ./$file
 ```
