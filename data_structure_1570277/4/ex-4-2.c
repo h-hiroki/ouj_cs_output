@@ -45,6 +45,23 @@ int linked_list_search_node(NODE_TYPE *head, int search_value)
     }
 }
 
+int linked_list_length(NODE_TYPE *head)
+{
+    if (head == NULL) {
+        return 0; // 見つからない場合
+    }
+
+    int index;
+    index = 0;
+    while (head != NULL) {
+        head = head->next;
+        index++;
+    }
+
+    return index;
+}
+
+
 void linked_list_print(NODE_TYPE *node)
 {
     while (NULL != node) {
@@ -59,6 +76,7 @@ int main()
     NODE_TYPE *head;
     int data;
     int searched_index;
+    int linked_list_len;
 
     head = NULL;
     for (int i = 0; i < DATA_SIZE; ++i) {
@@ -71,5 +89,8 @@ int main()
 
     searched_index = linked_list_search_node(head, 11);
     printf("searched_index is %d \n", searched_index);
+
+    linked_list_len = linked_list_length(head);
+    printf("linked list length is %d \n", linked_list_len);
     return 0;
 }
