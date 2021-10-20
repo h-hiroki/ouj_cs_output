@@ -6,8 +6,9 @@
 
 ## exec
 ```shell
-$ cargo test
+# 標準入力を受け付ける処理も書くので起動するテストは指定する
+$ cargo test ex1
 
 # println!を確認する場合
-$ cargo test -- --nocapture
+$ cargo test ex1 -- --nocapture
 ```
